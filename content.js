@@ -146,27 +146,30 @@
 
     toggle.addEventListener("click", () => {
       panel.classList.toggle("cwc-collapsed");
+      resetCollapseTimer();
     });
 
-    // Auto-fade when idle
-    let fadeTimer;
-    function resetFade() {
-      panel.style.opacity = "1";
-      clearTimeout(fadeTimer);
-      fadeTimer = setTimeout(() => {
+    // Auto-collapse after 5 seconds of inactivity
+    let collapseTimer;
+    function resetCollapseTimer() {
+      clearTimeout(collapseTimer);
+      collapseTimer = setTimeout(() => {
+        panel.classList.add("cwc-collapsed");
         panel.style.opacity = "0.35";
       }, 3000);
     }
+
     panel.addEventListener("mouseenter", () => {
-      clearTimeout(fadeTimer);
+      clearTimeout(collapseTimer);
+      panel.classList.remove("cwc-collapsed");
       panel.style.opacity = "1";
     });
-    panel.addEventListener("mouseleave", resetFade);
+    panel.addEventListener("mouseleave", resetCollapseTimer);
 
     // Init
     loadWidth((pct) => {
       setSlider(pct);
-      resetFade();
+      resetCollapseTimer();
     });
   }
 
