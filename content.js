@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const DEFAULT_WIDTH = 75; // percent
+  const DEFAULT_WIDTH = 85; // percent
   const MIN_WIDTH = 40;
   const MAX_WIDTH = 98;
   const STORAGE_KEY = "claude-wider-chat-width";

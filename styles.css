@@ -2,10 +2,12 @@
 
 /* Widen the main conversation column */
 .mx-auto {
-  max-width: var(--claude-wider-chat-width, 75%) !important;
+  max-width: var(--claude-wider-chat-width, 85%) !important;
+  transition: max-width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
 
 /* Also target the composer / input area at the bottom */
 .mx-auto.w-full {
-  max-width: var(--claude-wider-chat-width, 75%) !important;
+  max-width: var(--claude-wider-chat-width, 85%) !important;
+  transition: max-width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
