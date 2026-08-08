@@ -29,7 +29,8 @@ jobs:
             content.js \
             styles.css \
             icon48.png \
-            icon128.png
+            icon128.png \
+            fonts
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
