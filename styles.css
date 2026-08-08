@@ -2,12 +2,44 @@
 
 /* Widen the main conversation column */
 .mx-auto {
-  max-width: var(--claude-wider-chat-width, 85%) !important;
+  max-width: var(--claude-wider-chat-width, 75%) !important;
   transition: max-width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
 }
 
 /* Also target the composer / input area at the bottom */
 .mx-auto.w-full {
-  max-width: var(--claude-wider-chat-width, 85%) !important;
+  max-width: var(--claude-wider-chat-width, 75%) !important;
   transition: max-width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+}
+
+/* Repoint claude.ai's text font variables at the selected font (inert until
+   a font is selected; icons, KaTeX, and code use other families). Applied on
+   every element, not just the root, because the app re-defines these aliases
+   on inner wrappers, which would shadow a root-level override. */
+html[data-cwc-font],
+html[data-cwc-font] body,
+html[data-cwc-font] body * {
+  --font-anthropic-sans: var(--claude-wider-chat-font) !important;
+  --font-anthropic-serif: var(--claude-wider-chat-font) !important;
+  --font-ui: var(--claude-wider-chat-font) !important;
+  --font-ui-serif: var(--claude-wider-chat-font) !important;
+  --font-claude-response: var(--claude-wider-chat-font) !important;
+  --font-user-message: var(--claude-wider-chat-font) !important;
+  --font-sans-serif: var(--claude-wider-chat-font) !important;
+  --font-serif: var(--claude-wider-chat-font) !important;
+  --font-sans: var(--claude-wider-chat-font) !important;
+  --cds-font-sans: var(--claude-wider-chat-font) !important;
+  --cds-font-voice: var(--claude-wider-chat-font) !important;
+  --family-ui: var(--claude-wider-chat-font) !important;
+}
+
+/* Code follows the selection only when the selection is monospace */
+html[data-cwc-font="jetbrains-mono"],
+html[data-cwc-font="jetbrains-mono"] body,
+html[data-cwc-font="jetbrains-mono"] body * {
+  --font-anthropic-mono: var(--claude-wider-chat-font) !important;
+  --font-mono: var(--claude-wider-chat-font) !important;
+  --cds-font-mono: var(--claude-wider-chat-font) !important;
+  --cds-font-mono-ui: var(--claude-wider-chat-font) !important;
+  --family-monospace: var(--claude-wider-chat-font) !important;
 }
