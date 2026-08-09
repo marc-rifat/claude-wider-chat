@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Claude Wider Chat",
   "description": "Makes the Claude.ai chatbox wider and adjustable with a draggable slider.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "permissions": ["storage"],
   "content_scripts": [
     {

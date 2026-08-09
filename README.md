@@ -21,7 +21,7 @@ Since this isn't on the Chrome Web Store, you'll need to load it manually:
 - **Reset** -- Click the Reset button to go back to the defaults (75% width, Default font).
 - **Collapse** -- Click the arrow icon to hide the controls. Click it again to bring them back.
 
-The panel fades out after a few seconds so it stays out of your way. Hover over it to bring it back.
+The panel starts minimized so it stays out of your way. Hover over it to expand it; it fades back down a few seconds after you leave.
 
 Your width and font settings are remembered across sessions.
 
