@@ -225,6 +225,8 @@
       </div>
     `;
 
+    panel.classList.add("cwc-collapsed");
+    panel.style.opacity = "0.35";
     document.body.appendChild(panel);
 
     const slider = panel.querySelector("#cwc-slider");
@@ -296,7 +298,6 @@
     loadSettings(({ width, font }) => {
       setSlider(width);
       setFont(font);
-      resetCollapseTimer();
     });
   }
 
